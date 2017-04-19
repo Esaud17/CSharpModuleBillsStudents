@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E7006A1-8C4B-442F-9B02-A4FC28294AD1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EOMOD</RootNamespace>
+    <AssemblyName>EOMOD</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Homegroup.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\Auth.cs" />
+    <Compile Include="Controllers\BanksController.cs" />
+    <Compile Include="Controllers\BillsController.cs" />
+    <Compile Include="Controllers\GradeStudents.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
+    <Compile Include="Models\BillsModels.cs" />
+    <Compile Include="Models\StudentsModels.cs" />
+    <Compile Include="Settings\Validations.cs" />
+    <Compile Include="Views\CobroDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CobroDetalle.Designer.cs">
+      <DependentUpon>CobroDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CobrosAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CobrosAdmin.Designer.cs">
+      <DependentUpon>CobrosAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserSession.cs" />
+    <Compile Include="Settings\ConnectionODBC.cs" />
+    <Compile Include="Views\frmSearchStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmSearchStudents.Designer.cs">
+      <DependentUpon>frmSearchStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Views\CobroDetalle.resx">
+      <DependentUpon>CobroDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CobrosAdmin.resx">
+      <DependentUpon>CobrosAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\frmSearchStudents.resx">
+      <DependentUpon>frmSearchStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PoinActive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PoinInactive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notifications.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\myspace alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tasks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Power - Log Off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Power - Shut Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iPhotoDupicator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Share alt 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Homegroup.ico" />
+    <Content Include="Origins.ico" />
+    <None Include="Resources\Power - Switch User.png" />
+    <None Include="Resources\Logo-Camisetas-de-Fisica.png" />
+    <None Include="Resources\Logo Camisetas de Fisica.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
