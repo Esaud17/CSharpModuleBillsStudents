@@ -105,7 +105,30 @@ namespace EOMOD.Views
             ctrBillsStudents.Total = (Math.Round(total,2)).ToString(nfi);
             txtTotal.Text = ctrBillsStudents.Total;
         }
+        private void ChangedCouta()
+        {
+            if (Validations.IsNumber(txbCouta.Text))
+            {
 
+                if (Validations.DisticnNullEmptyWhiteSpace(this.txbCouta.Text))
+                {
+                    ctrBillsStudents.Couta = txbCouta.Text;
+                }
+                else
+                {
+                    ctrBillsStudents.Couta = "0";
+                }
+
+                getTotal();
+            }
+            else
+            {
+                ctrBillsStudents.Couta = "0";
+                getTotal();
+
+                txbCouta.Text = String.Empty;
+            }
+        }
         private void ChangedInteres()
         {
             if (Validations.IsNumber(txbInteres.Text)) { 
@@ -168,6 +191,8 @@ namespace EOMOD.Views
 
         private void btnPay_Click(object sender, EventArgs e)
         {
+
+            ChangedCouta();
             ChangedInteres();
 
             ctrBillsStudents.Fecha = dtpFecha.Value;
@@ -182,6 +207,7 @@ namespace EOMOD.Views
 
             txbInteres.ReadOnly = true;
             txtTotal.ReadOnly = true;
+            txbCouta.ReadOnly = true;
             
         }
 
@@ -209,6 +235,11 @@ namespace EOMOD.Views
         private void button1_Click(object sender, EventArgs e)
         {
             ChangedInteres();
+        }
+
+        private void txbCouta_TextChanged(object sender, EventArgs e)
+        {
+            ChangedCouta();
         }
     }
 }

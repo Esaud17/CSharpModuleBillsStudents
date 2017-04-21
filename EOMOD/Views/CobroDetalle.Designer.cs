@@ -145,10 +145,10 @@
             // 
             this.txbCouta.Location = new System.Drawing.Point(229, 102);
             this.txbCouta.Name = "txbCouta";
-            this.txbCouta.ReadOnly = true;
             this.txbCouta.Size = new System.Drawing.Size(184, 20);
             this.txbCouta.TabIndex = 26;
             this.txbCouta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbCouta.TextChanged += new System.EventHandler(this.txbCouta_TextChanged);
             // 
             // panel3
             // 

@@ -61,29 +61,29 @@ namespace EOMOD.Views
             {
                 if (Validations.DisticnNullEmptyWhiteSpace(Philter))
                 {
-                    Philter += String.Format("AND codigog  LIKE '%{0}%'", cbmGrado.SelectedValue.ToString());
+                    Philter += String.Format("AND  Ttalonario.codigog  LIKE '%{0}%'", cbmGrado.SelectedValue.ToString());
                 }
                 else
                 {
-                    Philter = String.Format("codigog LIKE '%{0}%'", cbmGrado.SelectedValue.ToString());
+                    Philter = String.Format("Ttalonario.codigog LIKE '%{0}%'", cbmGrado.SelectedValue.ToString());
                 }
 
             }
 
             if (Validations.DisticnNullEmptyWhiteSpace(txbRegistroCode.Text))
             {
-                Philter = String.Format("registro LIKE '%{0}%'", txbRegistroCode.Text);
+                Philter = String.Format("Ttalonario.registro LIKE '%{0}%'", txbRegistroCode.Text);
             }
 
             if (Validations.DisticnNullEmptyWhiteSpace(txbName.Text))
             {
 
                 if ( Validations.DisticnNullEmptyWhiteSpace(Philter)){
-                    Philter += String.Format("AND pnombre  LIKE '%{0}%'",txbName.Text);
+                    Philter += String.Format("AND Talumno.pnombre  LIKE '%{0}%'", txbName.Text);
                 }
                 else
                 {
-                    Philter = String.Format("pnombre LIKE '%{0}%'", txbName.Text);
+                    Philter = String.Format("Talumno.pnombre LIKE '%{0}%'", txbName.Text);
                 }
 
             }
@@ -92,11 +92,11 @@ namespace EOMOD.Views
             {
                 if (Validations.DisticnNullEmptyWhiteSpace(Philter))
                 {
-                    Philter += String.Format("AND papellido  LIKE '%{0}%'", txbApellido.Text);
+                    Philter += String.Format("AND Talumno.papellido  LIKE '%{0}%'", txbApellido.Text);
                 }
                 else
                 {
-                    Philter = String.Format("papellido LIKE '%{0}%'", txbApellido.Text);
+                    Philter = String.Format("Talumno.papellido LIKE '%{0}%'", txbApellido.Text);
                 }
             }
 

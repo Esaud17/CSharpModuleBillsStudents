@@ -34,7 +34,7 @@ namespace EOMOD.Controllers
 
         public void UpdateByRegistroNCuenta(String Registro, BillsModels datos)
         {
-            CursorDB.CommandSqlText = string.Format("UPDATE tmensualidad SET  ncuenta = '{2}', interes=CCur('{3}'), Total = CCur('{4}'), fechap = '{5}' , confirmado = True  WHERE registro = '{0}' AND ncuota = {1}", Registro, datos.NumbCouta, datos.Ncuenta, datos.Interes, datos.Total, datos.Fecha.ToString("dd/MM/yyyy hh:mm:ss"));          
+            CursorDB.CommandSqlText = string.Format("UPDATE tmensualidad SET  ncuenta = '{2}', interes=CCur('{3}'), Total = CCur('{4}'), fechap = '{5}' , cuota=CCur('{6}'), confirmado = True  WHERE registro = '{0}' AND ncuota = {1}", Registro, datos.NumbCouta, datos.Ncuenta, datos.Interes, datos.Total, datos.Fecha.ToString("dd/MM/yyyy hh:mm:ss"), datos.Couta);          
             CursorDB.ExecuteNonQuery();
 
         }

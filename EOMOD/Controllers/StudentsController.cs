@@ -29,7 +29,7 @@ namespace EOMOD.Controllers
             DataTable result = new DataTable();
             if (Validations.DisticnNullEmptyWhiteSpace(Philter)) {
                 CursorDB.CommandSqlText = string.Format(
-                    "SELECT registro as Registro_Código, pnombre+' '+snombre+' '+papellido+' '+sapellido as Nombre_Completo,sexo as Genero,RNE as Identidad FROM Talumno WHERE {0} ", Philter);
+                    "SELECT Talumno.registro as Registro_Código, Talumno.pnombre+' '+Talumno.snombre+' '+Talumno.papellido+' '+Talumno.sapellido as Nombre_Completo,sexo as Genero,RNE as Identidad FROM Ttalonario,Talumno WHERE  Ttalonario.registro = Talumno.registro AND {0} ", Philter);
                 result = CursorDB.ExecuteAdapterQuery();
             }
             return result;
