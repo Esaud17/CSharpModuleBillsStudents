@@ -39,3 +39,6 @@ C:\Users\OERL90\Documents\Visual Studio 2015\Projects\EOMODCOBROS\CSharpModuleBi
 C:\Users\OERL90\Documents\Visual Studio 2015\Projects\EOMODCOBROS\CSharpModuleBillsStudents\EOMOD\obj\Debug\EOMOD.Views.frmSearchStudents.resources
 C:\Users\OERL90\Documents\Visual Studio 2015\Projects\EOMODCOBROS\CSharpModuleBillsStudents\EOMOD\obj\Debug\EOMOD.frmLogin.resources
 C:\Users\OERL90\Documents\Visual Studio 2015\Projects\EOMODCOBROS\CSharpModuleBillsStudents\EOMOD\obj\Debug\EOMOD.csproj.GenerateResource.Cache
+D:\Projectos Softwares\Visual Studio 2015\Projects\EOMODCOBROS\CSharpModuleBillsStudents\EOMOD\bin\Debug\EOMOD.exe.config
+D:\Projectos Softwares\Visual Studio 2015\Projects\EOMODCOBROS\CSharpModuleBillsStudents\EOMOD\obj\Debug\EOMOD.exe
+D:\Projectos Softwares\Visual Studio 2015\Projects\EOMODCOBROS\CSharpModuleBillsStudents\EOMOD\obj\Debug\EOMOD.pdb

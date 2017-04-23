@@ -79,11 +79,11 @@ namespace EOMOD.Views
             {
 
                 if ( Validations.DisticnNullEmptyWhiteSpace(Philter)){
-                    Philter += String.Format("AND Talumno.pnombre  LIKE '%{0}%'", txbName.Text);
+                    Philter += String.Format("AND Ttalonario.nombre  LIKE '%{0}%'", txbName.Text);
                 }
                 else
                 {
-                    Philter = String.Format("Talumno.pnombre LIKE '%{0}%'", txbName.Text);
+                    Philter = String.Format("Ttalonario.nombre LIKE '%{0}%'", txbName.Text);
                 }
 
             }
@@ -92,11 +92,11 @@ namespace EOMOD.Views
             {
                 if (Validations.DisticnNullEmptyWhiteSpace(Philter))
                 {
-                    Philter += String.Format("AND Talumno.papellido  LIKE '%{0}%'", txbApellido.Text);
+                    Philter += String.Format("AND Ttalonario.nombre  LIKE '%{0}%'", txbApellido.Text);
                 }
                 else
                 {
-                    Philter = String.Format("Talumno.papellido LIKE '%{0}%'", txbApellido.Text);
+                    Philter = String.Format("Ttalonario.nombre LIKE '%{0}%'", txbApellido.Text);
                 }
             }
 
