@@ -89,6 +89,7 @@ namespace EOMOD.Views
             BillsModels.Ncuota = ncuota;
           
             CobroDetalle screenCobroDetalle = new CobroDetalle();
+            screenCobroDetalle.setLabel(chkbCobros.Checked);
             if (screenCobroDetalle.ShowDialog() == DialogResult.OK)
             {
 

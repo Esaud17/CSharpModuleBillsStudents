@@ -30,8 +30,15 @@ namespace EOMOD.Views
             this.loadBanksAccount();
             this.loadBillsNcuota();
             this.loadData();
+            
+        }
 
-           // toolTip1.SetToolTip(this.btnCalcTotal, "Calcular Total");
+        public void setLabel(bool status)
+        {
+            if (status)
+            {
+                btnPay.Text = "Actualizar";
+            }
         }
 
         private void loadBanksAccount()
