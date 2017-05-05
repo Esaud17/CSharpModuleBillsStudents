@@ -25,7 +25,7 @@ namespace EOMOD.Views
         private void loadData()
         {
             DataTable Stu = ctrStudentds.FindByRegistroCode(this.txbRegistroCode.Text);
-            DataTable Bill = ctrBillsStudents.FindByRegistroCode(this.txbRegistroCode.Text);
+            DataTable Bill = ctrBillsStudents.FindByRegistroCode(this.txbRegistroCode.Text,chkbCobros.Checked);
 
             foreach (DataRow row in Stu.Rows)
             {

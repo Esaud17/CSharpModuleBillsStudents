@@ -44,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txbGenero = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.chkbCobros = new System.Windows.Forms.CheckBox();
             this.panel3.SuspendLayout();
             this.pnlRegistroCode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -200,11 +201,23 @@
             this.statusStrip1.TabIndex = 35;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // chkbCobros
+            // 
+            this.chkbCobros.AutoSize = true;
+            this.chkbCobros.Location = new System.Drawing.Point(258, 12);
+            this.chkbCobros.Name = "chkbCobros";
+            this.chkbCobros.Size = new System.Drawing.Size(127, 17);
+            this.chkbCobros.TabIndex = 36;
+            this.chkbCobros.Text = "Ver cobros realizados";
+            this.chkbCobros.UseVisualStyleBackColor = true;
+            this.chkbCobros.Visible = false;
+            // 
             // CobrosAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(523, 273);
+            this.Controls.Add(this.chkbCobros);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txbGenero);
@@ -256,5 +269,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbGenero;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.CheckBox chkbCobros;
     }
 }

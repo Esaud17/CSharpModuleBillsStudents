@@ -14,11 +14,11 @@ namespace EOMOD.Controllers
     {
         private ConnectionODBC CursorDB = new ConnectionODBC();
         
-        public DataTable FindByRegistroCode(String Registro)
+        public DataTable FindByRegistroCode(String Registro, Boolean Condicion)
         {
             DataTable result = new DataTable();
 
-            CursorDB.CommandSqlText = string.Format("SELECT  mes as Descripción, ncuota as Numero_Cuota, cuota as Valor FROM tmensualidad WHERE registro = '{0}' AND ((ncuota = 0) OR (ncuota = 12)) AND confirmado = 0 ORDER BY ncuota ", Registro);
+            CursorDB.CommandSqlText = string.Format("SELECT  mes as Descripción, ncuota as Numero_Cuota, cuota as Valor FROM tmensualidad WHERE registro = '{0}' AND ((ncuota = 0) OR (ncuota = -1)) AND confirmado = CBool('{1}') ORDER BY ncuota ", Registro,Condicion.ToString());
             result = CursorDB.ExecuteAdapterQuery();
             return result;
         }
@@ -34,7 +34,7 @@ namespace EOMOD.Controllers
 
         public void UpdateByRegistroNCuenta(String Registro, BillsModels datos)
         {
-            CursorDB.CommandSqlText = string.Format("UPDATE tmensualidad SET  ncuenta = '{2}', interes=CCur('{3}'), Total = CCur('{4}'), fechap = '{5}' , cuota=CCur('{6}'), confirmado = True  WHERE registro = '{0}' AND ncuota = {1}", Registro, datos.NumbCouta, datos.Ncuenta, datos.Interes, datos.Total, datos.Fecha.ToString("dd/MM/yyyy hh:mm:ss"), datos.Couta);          
+            CursorDB.CommandSqlText = string.Format("UPDATE tmensualidad SET  ncuenta = '{2}', interes=CCur('{3}'), Total = CCur('{4}'), fechap = '{5}' , cuota=CCur('{6}'), codigob=CInt('{7}'), confirmado = True  WHERE registro = '{0}' AND ncuota = {1}", Registro, datos.NumbCouta, datos.Ncuenta, datos.Interes, datos.Total, datos.Fecha.ToString("dd/MM/yyyy hh:mm:ss"), datos.Couta,datos.CodigoBanco);          
             CursorDB.ExecuteNonQuery();
 
         }

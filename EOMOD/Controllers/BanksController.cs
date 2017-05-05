@@ -13,6 +13,15 @@ namespace EOMOD.Controllers
     {
         private ConnectionODBC CursorDB = new ConnectionODBC();
 
+        public DataTable FindTcuentasByNcuenta(String Ncuenta)
+        {
+            DataTable result = new DataTable();
+
+            CursorDB.CommandSqlText = string.Format("SELECT TOP 1 codigob , ncuenta  FROM tcuentas WHERE ncuenta = '{0}' ",Ncuenta);
+            result = CursorDB.ExecuteAdapterQuery();
+            return result;
+        }
+
         public DataTable FindTcuentas()
         {
             DataTable result = new DataTable();

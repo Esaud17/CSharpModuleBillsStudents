@@ -153,6 +153,15 @@ namespace EOMOD.Views
             }
         }
 
+        private void loadCodeb()
+        {
+            ctrBillsStudents.Ncuenta = cbmBancos.SelectedValue.ToString();
+            DataTable Codigob = ctrBanck.FindTcuentasByNcuenta(ctrBillsStudents.Ncuenta);
+            foreach (DataRow row in Codigob.Rows)
+            {
+                ctrBillsStudents.CodigoBanco = row["codigob"].ToString();
+            }
+        }
         private void cbmBancos_KeyDown(object sender, KeyEventArgs e)
         {
             e.Handled = true;
@@ -194,9 +203,9 @@ namespace EOMOD.Views
 
             ChangedCouta();
             ChangedInteres();
+            loadCodeb();
 
             ctrBillsStudents.Fecha = dtpFecha.Value;
-            ctrBillsStudents.Ncuenta = cbmBancos.SelectedValue.ToString();
             ctrBillsStudents.UpdateByRegistroNCuenta(ctrStudentds.Registro, ctrBillsStudents);
 
             MessageBox.Show(this, "Registro de pago realizado", "Confirmación de pago ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -213,8 +222,9 @@ namespace EOMOD.Views
 
         private void cbmBancos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ctrBillsStudents.Ncuenta = cbmBancos.SelectedValue.ToString(); 
+            loadCodeb();
         }
+
 
         private void txbInteres_KeyDown(object sender, KeyEventArgs e)
         {

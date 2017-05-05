@@ -14,6 +14,8 @@ namespace EOMOD.Models
 
         public String Ncuenta { get; set; }
 
+        public String CodigoBanco { get; set; }
+
         public String Descripcion { get; set; }
 
         public String Couta { get; set; }
