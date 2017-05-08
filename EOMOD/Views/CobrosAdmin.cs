@@ -21,6 +21,8 @@ namespace EOMOD.Views
         public CobrosAdmin()
         {
             InitializeComponent();
+            checkPermision();
+
         }
         private void loadData()
         {
@@ -46,6 +48,14 @@ namespace EOMOD.Views
             txbGenero.Text = ctrStudentds.Sexo;
             txbGrado.Text = ctrStudentds.Grado;
             dataGridView1.DataSource = Bill;
+        }
+
+        private void checkPermision()
+        {
+            if (Auth.Name == "JAIME NUÑEZ")
+            {
+                chkbCobros.Visible = true;
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

@@ -38,6 +38,7 @@ namespace EOMOD.Views
             if (status)
             {
                 btnPay.Text = "Actualizar";
+                loadBillsInfo();
             }
         }
 
@@ -73,15 +74,29 @@ namespace EOMOD.Views
             txbGrado.Text = ctrStudentds.Grado;
       
         }
+        
+        private void loadBillsInfo()
+        {
+            DataTable Bills = ctrBillsStudents.FindByRegistroNCuenta(this.txbRegistroCode.Text, Int32.Parse(BillsModels.Ncuota));
 
+            foreach (DataRow row in Bills.Rows)
+            {
+               
+                    ctrBillsStudents.Fecha = DateTime.Parse(row["fechap"].ToString());
+                    ctrBillsStudents.Ncuenta = row["ncuenta"].ToString();
+            }
 
+            dtpFecha.Value = ctrBillsStudents.Fecha;
+            cbmBancos.SelectedIndex = cbmBancos.FindString(ctrBillsStudents.Ncuenta);
+            
+        }
+        
         private void loadBillsNcuota()
         {
             DataTable Bills = ctrBillsStudents.FindByRegistroNCuenta(this.txbRegistroCode.Text,Int32.Parse(BillsModels.Ncuota));
 
             foreach (DataRow row in Bills.Rows)
             {
-                
                 ctrBillsStudents.Descripcion = row["mes"].ToString();
                 ctrBillsStudents.NumbCouta = row["ncuota"].ToString();
                 ctrBillsStudents.Couta = row["cuota"].ToString();
