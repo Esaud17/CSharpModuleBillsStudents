@@ -44,7 +44,6 @@ D:\Projectos Softwares\Visual Studio 2015\Projects\EOMODCOBROS\CSharpModuleBills
 D:\Projectos Softwares\Visual Studio 2015\Projects\EOMODCOBROS\CSharpModuleBillsStudents\EOMOD\obj\Debug\EOMOD.pdb
 D:\Projectos Softwares\Visual Studio 2015\Projects\EOMODCOBROS\CSharpModuleBillsStudents\EOMOD\bin\Debug\EOMOD.exe
 D:\Projectos Softwares\Visual Studio 2015\Projects\EOMODCOBROS\CSharpModuleBillsStudents\EOMOD\bin\Debug\EOMOD.pdb
-D:\Projectos Softwares\Visual Studio 2015\Projects\EOMODCOBROS\CSharpModuleBillsStudents\EOMOD\obj\Debug\EOMOD.csprojResolveAssemblyReference.cache
 D:\Projectos Softwares\Visual Studio 2015\Projects\EOMODCOBROS\CSharpModuleBillsStudents\EOMOD\obj\Debug\EOMOD.Views.CobroDetalle.resources
 D:\Projectos Softwares\Visual Studio 2015\Projects\EOMODCOBROS\CSharpModuleBillsStudents\EOMOD\obj\Debug\EOMOD.Views.CobrosAdmin.resources
 D:\Projectos Softwares\Visual Studio 2015\Projects\EOMODCOBROS\CSharpModuleBillsStudents\EOMOD\obj\Debug\EOMOD.frmHome.resources
